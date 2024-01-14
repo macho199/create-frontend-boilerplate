@@ -18,7 +18,7 @@ $ npm init -y
 $ npm install react react-dom
 
 # typescript, type-check, preset-typescript 설치
-$ npm install -D typescript type-check @babel/preset-typescript
+$ npm install -D typescript @babel/preset-typescript
 
 # React, ReactDOM types 설치
 $ npm install -D @types/node @types/react @types/react-dom
