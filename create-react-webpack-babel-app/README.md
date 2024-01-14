@@ -154,6 +154,14 @@ const App = () => {
 export default App;
 ```
 
+```css
+// src/index.css
+
+body {
+  background-color: #e2e8f0;
+}
+```
+
 ```html
 // public/index.html
 
