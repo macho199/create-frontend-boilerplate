@@ -2,8 +2,12 @@
 
 ## 1. 프로젝트 초기화
 
-```
+```bash
 # package.json 생성
+
+mkdir create-react-webpack-babel-app
+cd create-react-webpack-babel-app
+
 npm init -y
 ```
 
