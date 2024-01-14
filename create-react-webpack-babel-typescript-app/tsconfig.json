@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "react",
+    "module": "CommonJS",
+    "esModuleInterop": true, // Commonjs방식으로 내보낸 모듈을 es모듈 방식으로 import로 가져옴
+    "allowSyntheticDefaultImports": true, // export default 를 export 한 값들을 가지는 객체로 설정
+    "forceConsistentCasingInFileNames": true, // 파일 이름에 일관된 대소문자 사용
+    "sourceMap": true,
+    "strict": true // 모든 엄격한 타입 검사 옵션을 활성화  alwaysStrict, strictNullChecks, strictBindCallApply, strictFunctionTypes, strictPropertyInitialization, noImplicitAny, noImplicitThis, useUnknownInCatchVariables
+  },
+  "include": ["src", "types"],
+  "exclude": ["node_modules"]
+}
