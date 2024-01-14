@@ -5,23 +5,23 @@
 ```bash
 # package.json 생성
 
-mkdir create-react-webpack-babel-app
-cd create-react-webpack-babel-app
+$ mkdir create-react-webpack-babel-app
+$ cd create-react-webpack-babel-app
 
-npm init -y
+$ npm init -y
 ```
 
 ## 2. 필수 패키지 설치
 
 ```bash
 # React, ReactDOM 설치
-npm install react react-dom
+$ npm install react react-dom
 
 # Babel 관련 패키지 설치
-npm install -D babel-loader @babel/core @babel/preset-env @babel/preset-react
+$ npm install -D babel-loader @babel/core @babel/preset-env @babel/preset-react
 
 # Webpack 관련 패키지 설치
-npm install -D webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader file-loader
+$ npm install -D webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader file-loader
 ```
 
 ## 3. 설정 파일 생성
@@ -188,14 +188,14 @@ body {
 ```
 
 ```bash
-npm start // 개발
-npm run build // 빌드
+$ npm start // 개발
+$ npm run build // 빌드
 ```
 
 ## 6. webpack-bundle-analyzer 패키지 설치
 
 ```bash
-npm install -D webpack-bundle-analyzer
+$ npm install -D webpack-bundle-analyzer
 ```
 
 ```js
@@ -212,7 +212,7 @@ module.exports = {
 ## 7. 번들링 시 css 파일 분리
 
 ```bash
-npm install -D mini-css-extract-plugin
+$ npm install -D mini-css-extract-plugin
 ```
 
 웹팩 설정 파일에서 플러그인 추가 및 설정
@@ -240,7 +240,7 @@ module.exports = {
 ## 8. 번들링 시 css minify 
 
 ```bash
-npm install -D css-minimizer-webpack-plugin
+$ npm install -D css-minimizer-webpack-plugin
 ```
 
 ```js
