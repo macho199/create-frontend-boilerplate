@@ -9,7 +9,7 @@
 | 4 | ✅ | create-react-webpack-babel-typescript-app | webpack | babel | typescript |  |
 | 5 | ⚠️ | create-react-webpack-babel-typescript-with-stylex-app | webpack | babel | typescript | stylex |
 | 6 | ✅ | create-react-webpack-babel-typescript-with-tailwindcss-and-twinmacro-app | webpack | babel | typescript | tailwindcss + twin.macro |
-| 7 | [ ] | create-react-webpack-typescript-app | webpack | typescript |  |  |
+| 7 | ✅ | create-react-webpack-typescript-app | webpack | typescript |  |  |
 | 8 | [ ] | create-react-vite-babel-app | vite | babel |  |  |
 | 9 | [ ] | create-react-vite-babel-with-stylex-app | vite | babel |  | stylex |
 | 10 | [ ] | create-react-vite-babel-with-tailwindcss-and-twinmacro-app | vite | babel |  | tailwindcss + twin.macro |

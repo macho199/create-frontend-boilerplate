@@ -6,8 +6,8 @@
 ```bash
 # package.json 생성
 
-$ mkdir create-react-webpack-babel-app
-$ cd create-react-webpack-babel-app
+$ mkdir create-react-webpack-babel-with-tailwindcss-and-twinmacro-app
+$ cd create-react-webpack-babel-with-tailwindcss-and-twinmacro-app
 
 $ npm init -y
 ```

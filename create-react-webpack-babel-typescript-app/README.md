@@ -220,10 +220,10 @@ body {
 ```
 
 ```bash
-$ npm start // 개발
-$ npm run type-check // 타입체커
-$ npm run type-check:watch // 타입체커 와쳐
-$ npm run build // 빌드
+$ npm start # 개발 서버 실행
+$ npm run build # 빌드 실행
+$ npm run type-check # 타입체크 실행
+$ npm run type-check:watch # 타입체크 와처 실행
 ```
 
 ## 6. webpack-bundle-analyzer 패키지 설치

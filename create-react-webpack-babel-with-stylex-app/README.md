@@ -6,8 +6,8 @@
 ```bash
 # package.json 생성
 
-$ mkdir create-react-webpack-babel-app
-$ cd create-react-webpack-babel-app
+$ mkdir create-react-webpack-babel-with-stylex-app
+$ cd create-react-webpack-babel-with-stylex-app
 
 $ npm init -y
 ```
@@ -192,8 +192,8 @@ body {
 ```
 
 ```bash
-$ npm start // 개발
-$ npm run build // 빌드
+$ npm start # 개발 서버 실행
+$ npm run build # 빌드 실행
 ```
 
 ## 6. webpack-bundle-analyzer 패키지 설치
