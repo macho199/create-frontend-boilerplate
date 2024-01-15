@@ -292,8 +292,6 @@ module.exports = {
 }
 ```
 
-
-
 ## 9. tailwind & twin.macro 설치
 
 ```bash
@@ -305,7 +303,7 @@ npm install -D twin.macro babel-plugin-twin babel-plugin-macros
 ```
 
 ```js
-// .tailwind.config.js
+// tailwind.config.js
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
