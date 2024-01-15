@@ -312,6 +312,13 @@ const App = () => {
 export default App;
 ```
 
+## 10. 개발 서버 실행 및 타입 체크
+
+```bash
+$ npm start # 개발 서버 실행
+$ npm run build # 빌드 실행
+```
+
 > stylex가 현재 0.4.1 버전인데 css 파일을 따로 추출해 주지 못하는 이슈가 있음
 >
 > 그래서 @stylexjs/webpack-plugin 설치 및 사용법을 따로 추가하지는 않음

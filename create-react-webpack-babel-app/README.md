@@ -259,3 +259,10 @@ module.exports = {
   },
 }
 ```
+
+## 9. 개발 서버 실행 및 타입 체크
+
+```bash
+$ npm start # 개발 서버 실행
+$ npm run build # 빌드 실행
+```
