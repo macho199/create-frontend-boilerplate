@@ -295,9 +295,11 @@ module.exports = {
 ## 9. tailwind & twin.macro 설치
 
 ```bash
+npm install @emotion/react @emotion/styled
+
 npm install -D tailwindcss postcss postcss-loader
 
-npm install -D @emotion/babel-preset-css-prop @emotion/react @emotion/styled autoprefixer 
+npm install -D @emotion/babel-preset-css-prop autoprefixer 
 
 npm install -D twin.macro babel-plugin-twin babel-plugin-macros
 ```
