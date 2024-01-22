@@ -22,7 +22,7 @@ module.exports = (env) => {
         },
         {
           test: /\.css$/i,
-          use: [env.production ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader'],
+          use: [env.production ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'postcss-loader'],
         },
         {
           test: /\.(jpg|jpeg|png|gif)$/,
