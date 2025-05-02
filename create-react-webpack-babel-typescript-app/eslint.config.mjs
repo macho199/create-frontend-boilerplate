@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import globals from 'globals';
+import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -11,14 +12,15 @@ import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   {
-    files: ['**/*.{js,mjs,cjs,jsx}'],
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     plugins: { js },
     extends: ['js/recommended'],
   },
   {
-    files: ['**/*.{js,mjs,cjs,jsx}'],
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     languageOptions: { globals: globals.browser },
   },
+  tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   pluginReactHooks.configs['recommended-latest'],
   jsxA11y.flatConfigs.recommended,
@@ -32,9 +34,8 @@ export default defineConfig([
   {
     settings: {
       'import/resolver': {
-        alias: {
-          map: [['@', './src']],
-          extensions: ['.js', '.jsx'],
+        typescript: {
+          project: './tsconfig.json',
         },
       },
     },

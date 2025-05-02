@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Button from './Button';
 
-const App = () => {
+export default function App() {
   const [state, setState] = useState<number>(0);
 
   const btnOnClickEventHandler = () => {
@@ -11,9 +12,7 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={btnOnClickEventHandler}>{state}</button>
+      <Button onClick={btnOnClickEventHandler}>{state}</Button>
     </div>
   );
-};
-
-export default App;
+}

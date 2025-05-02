@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '@/Button';
 
 export default function App() {
   const [state, setState] = useState(0);
@@ -11,7 +12,7 @@ export default function App() {
 
   return (
     <div>
-      <button onClick={btnOnClickEventHandler}>{state}</button>
+      <Button onClick={btnOnClickEventHandler}>{state}</Button>
     </div>
   );
 }

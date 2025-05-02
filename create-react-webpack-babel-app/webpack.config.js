@@ -11,10 +11,10 @@ module.exports = (env) => {
       filename: 'bundle.js',
     },
     resolve: {
+      extensions: ['.jsx', '.js'],
       alias: {
         '@': path.resolve(__dirname, 'src'),
       },
-      extensions: ['.jsx', '.js'],
     },
     module: {
       rules: [
