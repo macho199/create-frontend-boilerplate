@@ -291,11 +291,63 @@ module.exports = {
 }
 ```
 
-## 9. 개발 서버 실행 및 타입 체크
+## 9. tailwindcss 설치
+
+```bash
+npm install -D tailwindcss @tailwindcss/postcss postcss postcss-loader
+```
+
+```mjs
+// postcss.config.mjs
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+  },
+};
+```
+
+```js
+// postcss-loader 추가
+// webpack.config.js
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+      },
+    ],
+  },
+};
+```
+
+```css
+/* tailwindcss import*/
+/* src/index.css */
+
+@import 'tailwindcss';
+```
+
+tailwindcss prettier 추가
+
+```bash
+npm install -D prettier prettier-plugin-tailwindcss
+```
+
+```json
+// .prettierrc
+{
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+```
+
+## 10. 개발 서버 실행 및 타입 체크
 
 ```bash
 $ npm start # 개발 서버 실행
 $ npm run build # 빌드 실행
 $ npm run type-check # 타입체크 실행
 $ npm run type-check:watch # 타입체크 와처 실행
+$ npx eslint src/
 ```
