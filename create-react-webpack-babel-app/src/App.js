@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const App = () => {
+export default function App() {
   const [state, setState] = useState(0);
 
   const btnOnClickEventHandler = () => {
@@ -14,6 +14,4 @@ const App = () => {
       <button onClick={btnOnClickEventHandler}>{state}</button>
     </div>
   );
-};
-
-export default App;
+}

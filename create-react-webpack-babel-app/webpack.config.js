@@ -1,24 +1,27 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env) => {
   return {
-    entry: "./src/index.js",
+    entry: './src/index.js',
     output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'bundle.js',
     },
     resolve: {
-      extensions: [".jsx", ".js"],
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
+      extensions: ['.jsx', '.js'],
     },
     module: {
       rules: [
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          loader: "babel-loader"
+          loader: 'babel-loader',
         },
         {
           test: /\.css$/i,
@@ -27,16 +30,16 @@ module.exports = (env) => {
         {
           test: /\.(jpg|jpeg|png|gif)$/,
           exclude: /node_modules/,
-          use: "file-loader",
+          use: 'file-loader',
         },
       ],
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./public/index.html",
+        template: './public/index.html',
       }),
       env.production ? new BundleAnalyzerPlugin() : '', // BundleAnalyzerPlugin 추가
       env.production ? new MiniCssExtractPlugin() : '', // MiniCssExtractPlugin 추가
     ],
-  }
+  };
 };
