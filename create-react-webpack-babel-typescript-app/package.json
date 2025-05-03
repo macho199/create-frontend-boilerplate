@@ -5,7 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --env production --config webpack.prod.js",
+    "build": "webpack --env production=true --config webpack.prod.js",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,7 @@
     "@babel/preset-typescript": "^7.23.3",
     "@eslint/css": "^0.7.0",
     "@eslint/js": "^9.25.1",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.6.0",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",

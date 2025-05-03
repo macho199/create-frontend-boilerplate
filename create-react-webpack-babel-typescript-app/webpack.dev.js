@@ -1,18 +1,23 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.config.js');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-module.exports = (env) => {
-  return merge(common(env), {
+module.exports = (env = {}) => {
+  return merge(common({ ...env, production: false }), {
     mode: 'development',
-    devtool: 'inline-source-map',
+    devtool: 'eval-cheap-module-source-map', // 빠른 rebuild용 소스맵
     devServer: {
       static: {
-        directory: path.join(__dirname, 'dist'),
+        directory: path.join(__dirname, 'public'),
       },
       port: 3000,
       hot: true,
-      historyApiFallback: true, // React Router가 관리하는 경로를 처리할 수 있도록 모든 요청을 index.html로 리다이렉트 합니다.
+      open: true,
+      historyApiFallback: true, // React Router 대응
     },
+    plugins: [
+      new ReactRefreshWebpackPlugin(), // Fast Refresh 지원
+    ],
   });
 };
