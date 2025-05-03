@@ -1,11 +1,11 @@
-const { merge } = require("webpack-merge");
-const common = require("./webpack.config.js");
+const { merge } = require('webpack-merge');
+const common = require('./webpack.config.js');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = (env) => {
   return merge(common(env), {
-    mode: "production",
+    mode: 'production',
     optimization: {
       minimize: true,
       minimizer: [
@@ -14,4 +14,4 @@ module.exports = (env) => {
       ],
     },
   });
-}
+};
